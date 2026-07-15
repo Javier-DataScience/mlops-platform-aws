@@ -1,0 +1,75 @@
+Standard Environment Workflow (MLOps Engineering Roadmap)
+Initial setup (only when adding new dependencies)
+
+Activate the environment:
+
+conda activate mlops_env
+
+Add a runtime dependency:
+
+uv add <package>
+
+Example:
+
+uv add fastapi
+
+Add a development dependency:
+
+uv add --dev <package>
+
+Example:
+
+uv add --dev pytest
+
+UV automatically updates:
+
+pyproject.toml
+uv.lock
+
+No manual editing of dependency files is required.
+
+Every time you restart your computer
+
+Activate the environment:
+
+conda activate mlops_env
+
+Restore all development dependencies:
+
+uv pip install --group dev
+
+Reinstall the project in editable mode:
+
+uv pip install -e .
+
+Run the project's validation command.
+
+Initially, this may simply be:
+
+pytest
+
+Later, as we build the platform, we can replace it with a dedicated validation script such as:
+
+python scripts/dev.py check
+
+or another command appropriate for the project.
+
+Do not use as the standard workflow
+uv sync
+
+This roadmap intentionally uses:
+
+a persistent Conda environment (because of the Deep Freeze constraint),
+UV as the dependency manager,
+pyproject.toml as the source of truth,
+uv.lock for reproducibility.
+Standard workflow for all long-term engineering projects
+Create a dedicated Conda environment.
+Activate it.
+Use uv add / uv add --dev to manage dependencies.
+Never install project dependencies directly with pip install.
+After each reboot:
+uv pip install --group dev
+uv pip install -e .
+Run the project's validation command.
+Commit changes once the project is in a valid state.
