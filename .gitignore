@@ -1,0 +1,68 @@
+# ==========================
+# Python
+# ==========================
+__pycache__/
+*.py[cod]
+*.pyo
+
+# ==========================
+# Virtual environments
+# ==========================
+.venv/
+venv/
+env/
+
+# Conda environments (if accidentally created inside project)
+conda-env/
+
+# ==========================
+# UV
+# ==========================
+# Keep uv.lock tracked
+# Ignore only local cache files if created
+.uv/
+
+# ==========================
+# Testing and coverage
+# ==========================
+.pytest_cache/
+.coverage
+htmlcov/
+
+# ==========================
+# Type checking / linting
+# ==========================
+.mypy_cache/
+.ruff_cache/
+
+# ==========================
+# Jupyter
+# ==========================
+.ipynb_checkpoints/
+
+# ==========================
+# IDE
+# ==========================
+.vscode/*.log
+
+# ==========================
+# Operating system
+# ==========================
+.DS_Store
+Thumbs.db
+
+# ==========================
+# Data
+# ==========================
+data/raw/
+data/processed/
+
+# ==========================
+# Logs
+# ==========================
+logs/
+
+# ==========================
+# AWS credentials
+# ==========================
+.aws/
