@@ -288,7 +288,7 @@ At the end of the roadmap, all components integrate into a complete enterprise M
                         Cloud Infrastructure
 
                  + Automation + Security + Monitoring
-```
+
 
 ---
 
