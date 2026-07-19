@@ -32,7 +32,7 @@ Every time you restart your computer
 
 Activate the environment:
 
-conda activate mlops_env
+conda activate mlops-env
 
 Restore all development dependencies:
 
