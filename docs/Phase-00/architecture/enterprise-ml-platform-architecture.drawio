@@ -1,0 +1,70 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Página-1" id="2Plpc3iPEX28_n6dssgu">
+    <mxGraphModel dx="1398" dy="750" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="ZKsoTCS67M0KQEMp31PU-1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="&lt;font style=&quot;font-size: 25px;&quot;&gt;Enterprise ML Platform&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;font-size: 25px;&quot;&gt;Production-oriented MLOps Architecture&lt;/font&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="80" width="630" x="80" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="ZKsoTCS67M0KQEMp31PU-2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="&lt;font style=&quot;font-size: 18px;&quot;&gt;Users / Applications&lt;/font&gt;&lt;div&gt;&lt;ul&gt;&lt;li&gt;&lt;font style=&quot;font-size: 18px;&quot;&gt;Business Applications&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font style=&quot;font-size: 18px;&quot;&gt;APIs&amp;nbsp;&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font style=&quot;font-size: 18px;&quot;&gt;Internal Users&lt;/font&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="110" width="450" x="189" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="ZKsoTCS67M0KQEMp31PU-4" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="&lt;font style=&quot;font-size: 18px;&quot;&gt;Inference &amp;amp; Serving Layer&lt;/font&gt;&lt;div&gt;&lt;ul&gt;&lt;li&gt;&lt;font style=&quot;font-size: 18px;&quot;&gt;Real-time APIs&amp;nbsp;&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font style=&quot;font-size: 18px;&quot;&gt;Batch Inference&amp;nbsp;&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font style=&quot;font-size: 18px;&quot;&gt;FastAPI&lt;/font&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="110" width="450" x="190" y="480" as="geometry" />
+        </mxCell>
+        <mxCell id="ZKsoTCS67M0KQEMp31PU-5" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="&lt;font style=&quot;font-size: 18px;&quot;&gt;Model Deployment Layer&lt;/font&gt;&lt;div&gt;&lt;ul&gt;&lt;li&gt;&lt;font style=&quot;font-size: 18px;&quot;&gt;Docker&amp;nbsp;&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font style=&quot;font-size: 18px;&quot;&gt;Kubernetes&amp;nbsp;&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font style=&quot;font-size: 18px;&quot;&gt;AWS ECS/EKS&lt;/font&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="115" width="445" x="189" y="710" as="geometry" />
+        </mxCell>
+        <mxCell id="ZKsoTCS67M0KQEMp31PU-6" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="&lt;font style=&quot;&quot;&gt;&lt;span style=&quot;background-color: transparent; font-size: 18px;&quot;&gt;Model Management Layer&lt;/span&gt;&lt;div style=&quot;&quot;&gt;&lt;br&gt;&lt;/div&gt;&lt;/font&gt;&lt;div&gt;&lt;ul&gt;&lt;li&gt;&lt;font style=&quot;font-size: 18px;&quot;&gt;&amp;nbsp;MLflow Registry&amp;nbsp;&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font style=&quot;font-size: 18px;&quot;&gt;Model Versioning&amp;nbsp;&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font style=&quot;font-size: 18px;&quot;&gt;Model Lineage&lt;br&gt;&lt;/font&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="130" width="440" x="199" y="960" as="geometry" />
+        </mxCell>
+        <mxCell id="ZKsoTCS67M0KQEMp31PU-7" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="&lt;font style=&quot;&quot;&gt;&lt;span style=&quot;font-size: 18px;&quot;&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;Training &amp;amp; Experimentation Layer&lt;/span&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;PyTorch&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;ul&gt;&lt;li&gt;Scikit-learn&lt;/li&gt;&lt;li&gt;&lt;font style=&quot;&quot;&gt;&lt;span style=&quot;font-size: 18px;&quot;&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;MLflow Tracking&lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; font-size: 18px;&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;/font&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;/span&gt;&lt;/span&gt;&lt;/font&gt;" vertex="1">
+          <mxGeometry height="130" width="440" x="199" y="1220" as="geometry" />
+        </mxCell>
+        <mxCell id="ZKsoTCS67M0KQEMp31PU-8" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="&lt;span style=&quot;background-color: transparent; font-size: 18px;&quot;&gt;Feature Engineering Layer&lt;/span&gt;&lt;div&gt;&lt;span style=&quot;font-size: 18px;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;ul&gt;&lt;li&gt;&lt;span style=&quot;font-size: 18px;&quot;&gt;Feature Pipelines&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;font-size: 18px;&quot;&gt;Feature Store Concepts&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;font-size: 18px;&quot;&gt;Data Transformations&lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="130" width="440" x="200" y="1470" as="geometry" />
+        </mxCell>
+        <mxCell id="ZKsoTCS67M0KQEMp31PU-9" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="&lt;span style=&quot;background-color: transparent; font-size: 18px;&quot;&gt;Data Platform Layer&lt;/span&gt;&lt;div&gt;&lt;span style=&quot;font-size: 18px;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;ul&gt;&lt;li&gt;&lt;span style=&quot;font-size: 18px;&quot;&gt;Amazon S3&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;font-size: 18px;&quot;&gt;AWS Glue&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;font-size: 18px;&quot;&gt;Amazon Athena&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;font-size: 18px;&quot;&gt;Data Lake&lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="170" width="440" x="200" y="1720" as="geometry" />
+        </mxCell>
+        <mxCell id="ZKsoTCS67M0KQEMp31PU-10" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="&lt;span style=&quot;background-color: transparent; font-size: 18px;&quot;&gt;Data&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; font-size: 18px;&quot;&gt;Sources Layer&lt;/span&gt;&lt;div&gt;&lt;span style=&quot;font-size: 18px;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;ul&gt;&lt;li&gt;&lt;span style=&quot;font-size: 18px;&quot;&gt;CSV Files&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;font-size: 18px;&quot;&gt;Databases&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;font-size: 18px;&quot;&gt;External Data Sources&lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="170" width="440" x="200" y="2030" as="geometry" />
+        </mxCell>
+        <mxCell id="ZKsoTCS67M0KQEMp31PU-11" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="&lt;span style=&quot;background-color: transparent; font-size: 18px;&quot;&gt;Infrastructure Layer&lt;/span&gt;&lt;div&gt;&lt;span style=&quot;font-size: 18px;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;ul&gt;&lt;li&gt;&lt;span style=&quot;font-size: 18px;&quot;&gt;Terraform&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;font-size: 18px;&quot;&gt;AWS IAM&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;font-size: 18px;&quot;&gt;Cloud Resources&lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="170" width="440" x="199" y="2338" as="geometry" />
+        </mxCell>
+        <mxCell id="ZKsoTCS67M0KQEMp31PU-12" parent="1" style="html=1;shadow=0;dashed=0;align=center;verticalAlign=middle;shape=mxgraph.arrows2.arrow;dy=0.6;dx=40;direction=south;notch=0;fillColor=#000000;fillStyle=solid;" value="" vertex="1">
+          <mxGeometry height="100" width="70" x="360" y="130" as="geometry" />
+        </mxCell>
+        <mxCell id="ZKsoTCS67M0KQEMp31PU-13" parent="1" style="html=1;shadow=0;dashed=0;align=center;verticalAlign=middle;shape=mxgraph.arrows2.arrow;dy=0.6;dx=40;direction=south;notch=0;fillColor=#000000;fillStyle=solid;" value="" vertex="1">
+          <mxGeometry height="100" width="70" x="360" y="370" as="geometry" />
+        </mxCell>
+        <mxCell id="ZKsoTCS67M0KQEMp31PU-14" edge="1" parent="1" source="ZKsoTCS67M0KQEMp31PU-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;innerLoopWaypoints=1;exitX=0;exitY=0;exitDx=60;exitDy=21;exitPerimeter=0;entryX=0.53;entryY=0.271;entryDx=0;entryDy=0;entryPerimeter=0;" target="ZKsoTCS67M0KQEMp31PU-13">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ZKsoTCS67M0KQEMp31PU-15" parent="1" style="html=1;shadow=0;dashed=0;align=center;verticalAlign=middle;shape=mxgraph.arrows2.arrow;dy=0.6;dx=40;direction=south;notch=0;fillColor=#000000;fillStyle=solid;" value="" vertex="1">
+          <mxGeometry height="100" width="70" x="370" y="600" as="geometry" />
+        </mxCell>
+        <mxCell id="ZKsoTCS67M0KQEMp31PU-16" parent="1" style="html=1;shadow=0;dashed=0;align=center;verticalAlign=middle;shape=mxgraph.arrows2.arrow;dy=0.6;dx=40;direction=south;notch=0;fillColor=#000000;fillStyle=solid;" value="" vertex="1">
+          <mxGeometry height="100" width="70" x="370" y="840" as="geometry" />
+        </mxCell>
+        <mxCell id="ZKsoTCS67M0KQEMp31PU-17" parent="1" style="html=1;shadow=0;dashed=0;align=center;verticalAlign=middle;shape=mxgraph.arrows2.arrow;dy=0.6;dx=40;direction=south;notch=0;fillColor=#000000;fillStyle=solid;" value="" vertex="1">
+          <mxGeometry height="100" width="70" x="370" y="1110" as="geometry" />
+        </mxCell>
+        <mxCell id="ZKsoTCS67M0KQEMp31PU-18" parent="1" style="html=1;shadow=0;dashed=0;align=center;verticalAlign=middle;shape=mxgraph.arrows2.arrow;dy=0.6;dx=40;direction=south;notch=0;fillColor=#000000;fillStyle=solid;" value="" vertex="1">
+          <mxGeometry height="100" width="70" x="370" y="1360" as="geometry" />
+        </mxCell>
+        <mxCell id="ZKsoTCS67M0KQEMp31PU-19" parent="1" style="html=1;shadow=0;dashed=0;align=center;verticalAlign=middle;shape=mxgraph.arrows2.arrow;dy=0.6;dx=40;direction=south;notch=0;fillColor=#000000;fillStyle=solid;" value="" vertex="1">
+          <mxGeometry height="100" width="70" x="370" y="1610" as="geometry" />
+        </mxCell>
+        <mxCell id="ZKsoTCS67M0KQEMp31PU-20" parent="1" style="html=1;shadow=0;dashed=0;align=center;verticalAlign=middle;shape=mxgraph.arrows2.arrow;dy=0.6;dx=40;direction=south;notch=0;fillColor=#000000;fillStyle=solid;" value="" vertex="1">
+          <mxGeometry height="100" width="70" x="370" y="1910" as="geometry" />
+        </mxCell>
+        <mxCell id="ZKsoTCS67M0KQEMp31PU-21" parent="1" style="html=1;shadow=0;dashed=0;align=center;verticalAlign=middle;shape=mxgraph.arrows2.arrow;dy=0.6;dx=40;direction=south;notch=0;fillColor=#000000;fillStyle=solid;" value="" vertex="1">
+          <mxGeometry height="100" width="70" x="370" y="2220" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
