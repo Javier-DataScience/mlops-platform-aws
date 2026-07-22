@@ -1,4 +1,9 @@
-# Main Terraform configuration
-#
-# AWS resources will be defined here in future phases.
-# Phase 0 only establishes the Terraform project foundation.
+resource "aws_s3_bucket" "mlops_demo_bucket" {
+  bucket = "mlops-engineering-demo-882507341805"
+
+  tags = {
+    Name        = "MLOps Engineering Demo"
+    Environment = "Learning"
+    ManagedBy   = "Terraform"
+  }
+}
