@@ -2,3 +2,19 @@ pip install uv
 conda activate mlops-env
 uv add --dev pytest ruff mypy pre-commit
 pre-commit install
+
+uv pip install --force-reinstall setuptools
+
+conda activate mlops-env
+
+$env:UV_PROJECT_ENVIRONMENT = $env:CONDA_PREFIX
+
+uv sync --group dev
+
+ruff check .
+
+mypy .
+
+pytest
+
+uv pip install --force-reinstall setuptools

@@ -1,75 +1,325 @@
-Standard Environment Workflow (MLOps Engineering Roadmap)
-Initial setup (only when adding new dependencies)
+==========================================================
+Standard Environment Workflow
+MLOps Engineering Roadmap
+==========================================================
 
-Activate the environment:
+Purpose
+-------
 
-conda activate mlops_env
+This document defines the standard development environment
+workflow for the MLOps Engineering Roadmap.
 
-Add a runtime dependency:
+Architecture decisions:
+
+- Conda manages the Python environment.
+- UV manages project dependencies.
+- pyproject.toml is the dependency source of truth.
+- uv.lock guarantees reproducibility.
+- No project .venv environments are used.
+- Terraform is installed globally but exposed through the
+  Conda environment activation workflow.
+
+This workflow is designed to work with Deep Freeze.
+
+
+==========================================================
+1. Activate Development Environment
+==========================================================
+
+Every development session starts with:
+
+conda activate mlops-env
+
+
+Verify:
+
+python --version
+
+Expected:
+
+Python 3.12.13
+
+
+==========================================================
+2. Configure UV Environment
+==========================================================
+
+UV must use the active Conda environment.
+
+Set:
+
+$env:UV_PROJECT_ENVIRONMENT = $env:CONDA_PREFIX
+
+
+Verify:
+
+echo $env:UV_PROJECT_ENVIRONMENT
+
+
+Expected:
+
+C:\Users\User\anaconda3\envs\mlops-env
+
+
+This tells UV:
+
+"Use the active Conda environment as the project environment."
+
+
+==========================================================
+3. Restore Project Dependencies
+==========================================================
+
+After reboot or environment recreation:
+
+Activate:
+
+conda activate mlops-env
+
+
+Configure UV:
+
+$env:UV_PROJECT_ENVIRONMENT = $env:CONDA_PREFIX
+
+
+Restore dependencies:
+
+uv sync --group dev
+
+
+This installs dependencies defined in:
+
+- pyproject.toml
+- uv.lock
+
+
+Verify:
+
+uv pip list
+
+
+==========================================================
+4. Add New Dependencies
+==========================================================
+
+Only when adding new dependencies.
+
+
+Runtime dependency:
 
 uv add <package>
+
 
 Example:
 
 uv add fastapi
 
-Add a development dependency:
+
+Development dependency:
 
 uv add --dev <package>
+
 
 Example:
 
 uv add --dev pytest
 
+
 UV automatically updates:
 
-pyproject.toml
-uv.lock
+- pyproject.toml
+- uv.lock
 
-No manual editing of dependency files is required.
 
-Every time you restart your computer
+Do not manually edit dependency versions.
 
-Activate the environment:
 
-conda activate mlops-env
+==========================================================
+5. Terraform Configuration
+==========================================================
 
-Restore all development dependencies:
+Terraform installation:
 
-uv pip install --group dev
+Location:
 
-Reinstall the project in editable mode:
+D:\TOOLS\Terraform
 
-uv pip install -e .
 
-Run the project's validation command.
+Version:
 
-Initially, this may simply be:
+Terraform v1.15.8
+windows_amd64
+
+
+Terraform must be available after activating:
+
+mlops-env
+
+
+Verify:
+
+terraform --version
+
+
+Expected:
+
+Terraform v1.15.8
+on windows_amd64
+
+
+==========================================================
+6. Terraform Project Workflow
+==========================================================
+
+Terraform commands must be executed inside the Terraform
+configuration directory.
+
+
+Navigate:
+
+cd infrastructure\terraform
+
+
+Initialize:
+
+terraform init
+
+
+Validate configuration:
+
+terraform validate
+
+
+Create execution plan:
+
+terraform plan
+
+
+Apply infrastructure:
+
+terraform apply
+
+
+Destroy infrastructure:
+
+terraform destroy
+
+
+==========================================================
+7. Environment Validation
+==========================================================
+
+Before committing changes:
+
+Run:
+
+
+Code quality:
+
+ruff check .
+
+
+Type validation:
+
+mypy .
+
+
+Tests:
 
 pytest
 
-Later, as we build the platform, we can replace it with a dedicated validation script such as:
 
-python scripts/dev.py check
+Expected:
 
-or another command appropriate for the project.
+- Ruff passes.
+- Mypy reports no issues.
+- Pytest executes successfully.
 
-Do not use as the standard workflow
-uv sync
 
-This roadmap intentionally uses:
+==========================================================
+8. Deep Freeze Recovery Workflow
+==========================================================
 
-a persistent Conda environment (because of the Deep Freeze constraint),
-UV as the dependency manager,
-pyproject.toml as the source of truth,
-uv.lock for reproducibility.
-Standard workflow for all long-term engineering projects
-Create a dedicated Conda environment.
-Activate it.
-Use uv add / uv add --dev to manage dependencies.
-Never install project dependencies directly with pip install.
-After each reboot:
-uv pip install --group dev
-uv pip install -e .
-Run the project's validation command.
-Commit changes once the project is in a valid state.
+After restarting the computer:
+
+1. Activate environment:
+
+conda activate mlops-env
+
+
+2. Configure UV:
+
+$env:UV_PROJECT_ENVIRONMENT = $env:CONDA_PREFIX
+
+
+3. Restore dependencies:
+
+uv sync --group dev
+
+
+4. Verify tools:
+
+python --version
+
+uv --version
+
+terraform --version
+
+
+5. Run validation:
+
+ruff check .
+
+mypy .
+
+pytest
+
+
+==========================================================
+9. Standard Engineering Rules
+==========================================================
+
+Always:
+
+- Use Conda environments.
+- Use UV for dependency management.
+- Commit pyproject.toml changes.
+- Commit uv.lock changes.
+- Keep infrastructure code version controlled.
+
+
+Never:
+
+- Create project .venv environments.
+- Use pip install for project dependencies.
+- Manually modify uv.lock.
+- Install packages outside the project workflow.
+
+
+==========================================================
+Current Environment
+==========================================================
+
+Environment:
+
+mlops-env
+
+
+Python:
+
+3.12.13
+
+
+Main tools:
+
+- UV 0.11.28
+- Terraform 1.15.8
+- Ruff
+- Mypy
+- Pytest
+- Pre-commit
+
+
+Project:
+
+mlops-engineering-roadmap
