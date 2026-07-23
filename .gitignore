@@ -66,3 +66,6 @@ logs/
 # AWS credentials
 # ==========================
 .aws/
+
+req.txt
+env_workflow.txt

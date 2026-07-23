@@ -7,7 +7,9 @@ authors = [
     { name = "Javier-DataScience", email = "alvaro.vega.vargas@gmail.com" }
 ]
 requires-python = ">=3.12"
-dependencies = []
+dependencies = [
+    "kaggle>=2.2.3",
+]
 
 [project.scripts]
 mlops-engineering-roadmap = "mlops_engineering_roadmap:main"
