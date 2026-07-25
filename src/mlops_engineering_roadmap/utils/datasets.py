@@ -6,11 +6,11 @@ Path:
     src/mlops_engineering_roadmap/utils/datasets.py
 
 Purpose:
-    Centralize dataset metadata and project data paths.
+    Centralize dataset configuration paths.
 
 Description:
-    Defines the project directories, dataset identifiers, and file locations
-    used by the data engineering pipeline.
+    Defines constants used by the data pipeline to locate raw,
+    processed, and downloaded datasets.
 """
 
 # =============================================================================
@@ -25,24 +25,39 @@ from pathlib import Path
 
 PROJECT_ROOT = Path(__file__).resolve().parents[3]
 
-DATA_DIR = PROJECT_ROOT / "data"
+DATA_DIRECTORY = PROJECT_ROOT / "data"
 
-RAW_DATA_DIR = DATA_DIR / "raw"
+RAW_DIRECTORY = DATA_DIRECTORY / "raw"
 
-PROCESSED_DATA_DIR = DATA_DIR / "processed"
+PROCESSED_DIRECTORY = DATA_DIRECTORY / "processed"
 
-FEATURES_DIR = DATA_DIR / "features"
-
-VERSIONS_DIR = DATA_DIR / "versions"
 
 # =============================================================================
-# Credit Risk Dataset Configuration
+# Raw Dataset Configuration
 # =============================================================================
 
 KAGGLE_DATASET = "laotse/credit-risk-dataset"
 
-DATASET_FILENAME = "credit_risk_dataset.csv"
+ORIGINAL_DATA_DIRECTORY = RAW_DIRECTORY / "original"
 
-DOWNLOAD_DIRECTORY = RAW_DATA_DIR
+DOWNLOAD_DIRECTORY = ORIGINAL_DATA_DIRECTORY
 
-DOWNLOADED_DATASET_PATH = DOWNLOAD_DIRECTORY / DATASET_FILENAME
+DOWNLOADED_DATASET_PATH = ORIGINAL_DATA_DIRECTORY / "credit_risk_dataset.csv"
+
+
+# =============================================================================
+# Processed Dataset Configuration
+# =============================================================================
+
+CUSTOMER_DIRECTORY = PROCESSED_DIRECTORY / "customer"
+
+FINANCIAL_HISTORY_DIRECTORY = PROCESSED_DIRECTORY / "financial_history"
+
+LOAN_APPLICATION_DIRECTORY = PROCESSED_DIRECTORY / "loan_application"
+
+
+CUSTOMER_DATASET_PATH = CUSTOMER_DIRECTORY / "customer.csv"
+
+FINANCIAL_HISTORY_DATASET_PATH = FINANCIAL_HISTORY_DIRECTORY / "financial_history.csv"
+
+LOAN_APPLICATION_DATASET_PATH = LOAN_APPLICATION_DIRECTORY / "loan_application.csv"
